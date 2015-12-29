@@ -70,7 +70,6 @@ sub extract_targetduration {
     my ($lines) = @_;
 
     for my $line (@$lines) {
-        chomp $line;
         if ($line =~ /\A#EXT-X-TARGETDURATION:(.+)\Z/) {
             return $1;
         }
@@ -85,8 +84,6 @@ sub extract_data_source_bag {
     my $line_num = scalar @$lines;
     for (my $i = 0; $i < $line_num; $i++) {
         my $line = $lines->[$i];
-        chomp $line;
-
         if ($line =~ /\A#EXTINF:.+\Z/) {
             my $extinf = $line;
             while (++$i < $line_num) {
