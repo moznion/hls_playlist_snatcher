@@ -12,6 +12,11 @@ Usage
 $ perl hps.pl <playlist URL>
 ```
 
+Requires
+--
+
+- cURL
+
 Author
 --
 
