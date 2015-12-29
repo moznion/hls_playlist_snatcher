@@ -8,6 +8,8 @@ use LWP::UserAgent;
 sub main {
     my ($playlist_url) = @_;
 
+    local $| = 1;
+
     my $ua = LWP::UserAgent->new;
     $ua->timeout(10);
 
